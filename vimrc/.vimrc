@@ -9,16 +9,20 @@ let NERDTreeShowHidden=1
 set encoding=utf-8
 map <silent> <C-n> :NERDTreeToggle<CR>
 
-let g:pdv_cfg_Author = "Guy Steels <guy@codedor.be>"
+let g:pdv_cfg_Author = "Elias De Vos <elias@codedor.be>"
 let g:pdv_cfg_Since = strftime("%Y-%m-%d")
 let g:pdv_cfg_Version = strftime("%Y-%m-%d")
 nnoremap <C-K> :call PhpDocClass()<CR>
 nnoremap <C-K> :call PhpDocSingle()<CR>
+
+" shortcuts
 nmap oo o<Esc>
 
-syntax on
-colorscheme itg_flat
-hi Directory guifg=#CCCCCC ctermfg=darkgrey
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
+"hi Directory guifg=#CCCCCC ctermfg=darkgrey
 
 set laststatus=2
 set number
