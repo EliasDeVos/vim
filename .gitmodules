@@ -6,4 +6,4 @@
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/pdv-standalone"]
 	path = bundle/pdv-standalone
-	url = git@github.com:freeman2501/pdv-standalone.git
+	url = https://github.com/freeman2501/pdv-standalone.git
