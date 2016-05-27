@@ -1,0 +1,6 @@
+How to install:
+
+copy this file into home folder,
+create symlink .vimrc -> /vim/vimrc/.vimrc
+go to .vim folder and run submodule init
+
