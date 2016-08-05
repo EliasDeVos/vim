@@ -42,11 +42,17 @@ else
   map <C-l> <C-w>l
 endif
 
-" shortcuts
-" double o enters a new line in normal mode
-"nmap oo o<Esc>
-" ctrl + l adds a ; at the end of the line and goes to normal mode
-"nmap <c-l> A;<ESC>
+"custom status line in vim
+set ruler
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+" first, enable status line always
+set laststatus=2
+
+" now set it up to change the status line based on mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermbg=240 ctermfg=220 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=118 ctermbg=20  gui=bold,reverse
+endif
 
 let g:solarized_termcolors=256
 syntax enable
@@ -67,6 +73,8 @@ set shiftwidth=4
 set expandtab
 
 set list listchars=eol:¬,tab:\▸\ ,extends:>,precedes:<
+
+set relativenumber
 
 " Jump to the last position when reopening a file
 if has("autocmd")
