@@ -71,6 +71,11 @@ set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 " first, enable status line always
 set laststatus=2
 
+" change tab size for php ad vue files
+autocmd FileType vue setlocal shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=2 tabstop=2
+autocmd FileType php setlocal shiftwidth=4 tabstop=4
+
 " now set it up to change the status line based on mode
 if version >= 700
   au InsertEnter * hi StatusLine term=reverse ctermbg=240 ctermfg=220 gui=undercurl guisp=Magenta
