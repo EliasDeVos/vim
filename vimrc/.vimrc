@@ -73,7 +73,7 @@ set laststatus=2
 
 " change tab size for php ad vue files
 autocmd FileType vue setlocal shiftwidth=2 tabstop=2
-autocmd FileType js setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 
 " now set it up to change the status line based on mode
